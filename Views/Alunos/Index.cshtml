@@ -1,0 +1,32 @@
+@model IEnumerable<Atividade_Criar_uma_p_gina_com_ASP_NET_MVC___CHECKPOINT_IV.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Lista de Alunos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Alunos Matriculados</h1>
+    <p>Confira abaixo a lista de alunos do sistema.</p>
+</div>
+
+<table class="table table-striped table-hover mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>RA</th>
+            <th>E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+            <tr>
+                <td>@aluno.Id</td>
+                <td>@aluno.Nome</td>
+                <td>@aluno.RA</td>
+                <td>@aluno.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
